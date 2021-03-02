@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Operation
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+        
+    
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="row">
+    
+        <input type="number" asp-for="NumberA" class="col-lg-2" />
+        +
+   
+        <input type="number" asp-for="NumberB" class="col-lg-2" />
+        =
+        <input type="number" disabled="disabled" class="col-lg-2" asp-for="Result" />
+
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit" asp-action="Index" />
+    </div>
+</form>
